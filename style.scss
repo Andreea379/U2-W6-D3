@@ -8,29 +8,16 @@
 header {
   background-color: $secondary-color;
   nav {
-    animation: fadeInAnimation ease 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    @keyframes fadeInAnimation {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
+    @include animation;
     font-family: Lobster;
     color: $primary_text_color;
     background-color: $secondary-color;
-    display: flex;
+    @include flex;
     gap: $lg;
-    align-items: center;
     justify-content: space-around;
     border-bottom: $x-sm-px solid $primary_text_color;
     div {
-      display: flex;
-      align-items: center;
+      @include flex;
       gap: $x-bg;
       .logo {
         padding-top: $sm;
@@ -77,38 +64,19 @@ header {
 
 .hero-section {
   height: $xxx-lg;
-  display: flex;
+  @include flex;
   justify-content: space-around;
-  align-items: center;
   h1 {
     display: inline-block;
     font-family: Lobster;
     font-weight: $bold;
     font-size: $bg;
     color: $primary_text_color;
-    animation: fadeInAnimation ease 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    @keyframes fadeInAnimation {
-      0% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
+    @include animation;
   }
   .hero-section-image {
+    @include img_animation;
     width: $x-bg;
-    animation: scale-up-center 5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-    @keyframes scale-up-center {
-      100% {
-        transform: scale(23.1);
-      }
-    }
   }
 }
 main {
@@ -123,12 +91,11 @@ main {
   }
   .buttons {
     justify-content: center;
-    display: flex;
+    @include flex;
 
     button {
       height: $md;
       border-radius: $bg-px;
-      border: none;
       margin: $sm;
       padding-left: $sm;
       padding-right: $sm;
@@ -147,12 +114,15 @@ main {
   .cards {
     margin-top: $lg;
     text-align: center;
-    width: 70%;
+    width: 100%;
     margin-inline: auto;
-    display: flex;
+    @include flex;
     justify-content: space-between;
+    padding-inline: 2rem;
     .card {
-      display: inline-block;
+      @include flex;
+      flex-direction: column;
+      flex-grow: 1;
       width: 20%;
       border: $sm-px solid rgb(240, 236, 236);
       text-align: center;
@@ -163,6 +133,7 @@ main {
         font-family: Mitr, sans-serif;
         color: $secondary-color;
         font-size: $md;
+        flex-grow: 1;
       }
       h5 {
         margin: 0;
@@ -178,7 +149,6 @@ main {
         width: $lg;
         height: $md;
         border-radius: $bg-px;
-        border: none;
         margin: $x-sm;
       }
     }

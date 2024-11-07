@@ -11,6 +11,11 @@ body {
   margin: 0;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
 header {
   background-color: rgb(31, 19, 1);
 }
@@ -22,8 +27,8 @@ header nav {
   color: #f4f4f4;
   background-color: rgb(31, 19, 1);
   display: flex;
-  gap: 5rem;
   align-items: center;
+  gap: 5rem;
   justify-content: space-around;
   border-bottom: 1px solid #f4f4f4;
 }
@@ -79,8 +84,8 @@ header nav button {
 .hero-section {
   height: 39rem;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
 }
 .hero-section h1 {
   display: inline-block;
@@ -101,10 +106,10 @@ header nav button {
   }
 }
 .hero-section .hero-section-image {
-  width: 3rem;
   animation: scale-up-center 5s;
   animation-iteration-count: 1;
   animation-fill-mode: both;
+  width: 3rem;
 }
 @keyframes scale-up-center {
   100% {
@@ -124,11 +129,11 @@ main .second-section {
 main .buttons {
   justify-content: center;
   display: flex;
+  align-items: center;
 }
 main .buttons button {
   height: 2rem;
   border-radius: 15px;
-  border: none;
   margin: 1.5rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -145,13 +150,18 @@ main .buttons .button3 {
 main .cards {
   margin-top: 5rem;
   text-align: center;
-  width: 70%;
+  width: 100%;
   margin-inline: auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding-inline: 2rem;
 }
 main .cards .card {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
   width: 20%;
   border: 2px solid rgb(240, 236, 236);
   text-align: center;
@@ -163,6 +173,7 @@ main .cards .card div {
   font-family: Mitr, sans-serif;
   color: rgb(31, 19, 1);
   font-size: 2rem;
+  flex-grow: 1;
 }
 main .cards .card h5 {
   margin: 0;
@@ -178,6 +189,5 @@ main .cards .card button {
   width: 5rem;
   height: 2rem;
   border-radius: 15px;
-  border: none;
   margin: 1rem;
 }/*# sourceMappingURL=style.css.map */

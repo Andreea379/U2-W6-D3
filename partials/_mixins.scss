@@ -1,0 +1,30 @@
+@mixin animation {
+  animation: fadeInAnimation ease 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin img_animation {
+  animation: scale-up-center 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  @keyframes scale-up-center {
+    100% {
+      transform: scale(23.1);
+    }
+  }
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
