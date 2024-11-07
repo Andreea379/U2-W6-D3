@@ -1,0 +1,186 @@
+@import "./partials/colors";
+@import "./partials/reset";
+@import "./partials/fonts";
+@import "./partials/animations";
+@import "./partials/buttons";
+@import "./partials/mixins";
+@import "./partials/spacing";
+header {
+  background-color: $secondary-color;
+  nav {
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+    font-family: Lobster;
+    color: $primary_text_color;
+    background-color: $secondary-color;
+    display: flex;
+    gap: $lg;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: $x-sm-px solid $primary_text_color;
+    div {
+      display: flex;
+      align-items: center;
+      gap: $x-bg;
+      .logo {
+        padding-top: $sm;
+      }
+      p {
+        font-weight: $bold;
+        font-size: xx-large;
+        display: inline-block;
+      }
+    }
+    ul {
+      li {
+        list-style: none;
+        display: inline-block;
+        a {
+          font-family: Mitr, sans-serif;
+          font-size: $x-sm;
+          text-decoration: none;
+          color: $primary_text_color;
+          margin-right: $md;
+        }
+      }
+    }
+    form {
+      input {
+        width: $x-lg;
+        height: $md;
+        padding-left: $x-sm;
+        background-color: transparent;
+        border-radius: $x-bg-px;
+        color: $primary-text-color;
+      }
+    }
+    button {
+      width: $bg;
+      height: $md;
+      background-color: transparent;
+      border-radius: $x-bg-px;
+      color: $primary-text-color;
+      border: $x-sm-px solid $primary-text-color;
+    }
+  }
+}
+
+.hero-section {
+  height: $xxx-lg;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  h1 {
+    display: inline-block;
+    font-family: Lobster;
+    font-weight: $bold;
+    font-size: $bg;
+    color: $primary_text_color;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+  .hero-section-image {
+    width: $x-bg;
+    animation: scale-up-center 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    @keyframes scale-up-center {
+      100% {
+        transform: scale(23.1);
+      }
+    }
+  }
+}
+main {
+  .second-section {
+    text-align: center;
+    font-family: Mitr, sans-serif;
+    color: $secondary-color;
+    font-weight: $light;
+    font-size: $md;
+    margin-top: $lg;
+    letter-spacing: $md-px;
+  }
+  .buttons {
+    justify-content: center;
+    display: flex;
+
+    button {
+      height: $md;
+      border-radius: $bg-px;
+      border: none;
+      margin: $sm;
+      padding-left: $sm;
+      padding-right: $sm;
+    }
+    .button1 {
+      background-color: #bad1f7;
+    }
+    .button2 {
+      background-color: #f5e3ce;
+    }
+    .button3 {
+      background-color: #c5f3c7;
+    }
+  }
+
+  .cards {
+    margin-top: $lg;
+    text-align: center;
+    width: 70%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    .card {
+      display: inline-block;
+      width: 20%;
+      border: $sm-px solid rgb(240, 236, 236);
+      text-align: center;
+      img {
+        width: 100%;
+      }
+      div {
+        font-family: Mitr, sans-serif;
+        color: $secondary-color;
+        font-size: $md;
+      }
+      h5 {
+        margin: 0;
+        margin-top: $x-sm;
+        font-family: poppins;
+        font-size: $sm;
+      }
+      p {
+        font-family: poppins;
+        font-size: $x-sm;
+      }
+      button {
+        width: $lg;
+        height: $md;
+        border-radius: $bg-px;
+        border: none;
+        margin: $x-sm;
+      }
+    }
+  }
+}
